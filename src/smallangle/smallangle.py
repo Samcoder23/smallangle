@@ -20,7 +20,7 @@ def cmd_group():
     show_default=True,  # show default in help
 )
 def sin(steps):
-    """Takes the sine of a list of values
+    """Takes the sine of a list of values \f
 
     Args:
         steps (int): amount of steps between 0 and 2 pi
@@ -40,7 +40,7 @@ def sin(steps):
     show_default=True,  # show default in help
 )
 def tan(steps):
-    """Takes the tangens of a list of values
+    """Takes the tangens of a list of values \f
 
     Args:
         steps (int): amount of steps between 0 and 2 pi
