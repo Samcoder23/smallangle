@@ -13,22 +13,19 @@ def cmd_group():
 
 @cmd_group.command()
 @click.option(
-    "-v",
-    "--value",
+    "-s",
+    "--steps",
     default=1,
-    help="Argument for chosen function.",
+    help="steps between 0 and 2pi.",
     show_default=True,  # show default in help
 )
-def sin(value):
-    """Function to give a sine of the x value
+def sin(steps):
+    """Takes the sine of a list of values
 
     Args:
-        number (int): value to give the end of the 
-
-    Returns:
-        list: containing the integers
+        steps (int): amount of steps between 0 and 2 pi
     """
-    x = np.linspace(0, 2 * pi, value)
+    x = np.linspace(0, 2 * pi, steps)
     df = pd.DataFrame({"x": x, "sin (x)": np.sin(x)})
     print(df)
     return
@@ -36,22 +33,19 @@ def sin(value):
 
 @cmd_group.command()
 @click.option(
-    "-v",
-    "--value",
+    "-s",
+    "--steps",
     default=1,
-    help="Argument for chosen function.",
+    help="steps between 0 and 2pi.",
     show_default=True,  # show default in help
 )
-def tan(value):
-    """List integers up to a given number.
+def tan(steps):
+    """Takes the tangens of a list of values
 
     Args:
-        number (int): list integers up to this number
-
-    Returns:
-        list: containing the integers
+        steps (int): amount of steps between 0 and 2 pi
     """
-    x = np.linspace(0, 2 * pi, value)
+    x = np.linspace(0, 2 * pi, steps)
     df = pd.DataFrame({"x": x, "tan (x)": np.tan(x)})
     print(df)
     return
